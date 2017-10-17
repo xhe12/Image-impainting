@@ -23,6 +23,13 @@
 
 %%
 clear all
+im1 = imread('pepper.png');
+im1 = rgb2gray(im1);
+u0 = im2double(im1);
+N = size(u0,2); % # of columns, x direction;
+M = size(u0,1); % # of rows, y direction;
+figure(1)
+imshow(u0)
 
 % Draw the inpainting area on the picture;
 [X,Y,u0,M,N] = Interactive;
